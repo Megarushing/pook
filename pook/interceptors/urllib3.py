@@ -178,6 +178,7 @@ class Urllib3Interceptor(BaseInterceptor):
         return HTTPResponse(
             path,
             body=body,
+            code=res._status,
             status=res._status,
             headers=headers,
             preload_content=False,
